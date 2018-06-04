@@ -36,17 +36,9 @@
 
 #emailFiel {
     position: relative;
-    left: 25%;
-    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
 }
-
-/*@media screen and (max-width: 600px){
-    #emailFiel {
-        position: relative;
-        left: 10%;
-        width: 80%;
-    }
-    }*/
 
 #title {
     position: relative;

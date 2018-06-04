@@ -1976,6 +1976,7 @@ pre code {
   background-clip: padding-box;
   border: 0 solid #ced4da;
   border-radius: 0;
+  text-align: center;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
