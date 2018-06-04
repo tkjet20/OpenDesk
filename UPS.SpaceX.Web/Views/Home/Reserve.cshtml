@@ -27,7 +27,7 @@
 <div id="centerDate">
     @using (Html.BeginForm())
     {
-        <h2>Date</h2>
+        <h4 style="position: relative">Date</h4>
         <br />
         <p>@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</p>
         <button type="button" onclick="showData()" class="btn btn-warning">SHOW DESKS</button>
@@ -52,8 +52,8 @@
 <br />
 
 <div class="form-group">
-    <h4 id="centerBtn" for="exampleInputEmail1">Email address</h4>
-    <input class="form-control" id="emailFiel" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+    <h4 id="centerBtn" for="exampleInputEmail1">ENTER YOUR EMAIL</h4>
+    <input class="form-control" id="emailFiel" aria-describedby="emailHelp" placeholder="" type="email">
     <small id="centerBtn" class="form-text text-muted">We'll never share your email with anyone else.</small>
 </div>
 
