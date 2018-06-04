@@ -29,7 +29,17 @@ textarea {
 
 li {
     color: white;
+}
+
+#change{
+    background-color: gold;
+    height: auto;
+    padding-top: 10px;
     padding-bottom: 10px;
+    width: 250px;
+    border-radius: 25px;
+    position: relative;
+    text-align: center;
 }
 
 .someClass {
