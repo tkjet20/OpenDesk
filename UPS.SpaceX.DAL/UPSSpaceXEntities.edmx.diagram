@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c0cc4843fc84a679697a2b5e6d1b802" Name="Diagram1">
+        <EntityTypeShape EntityType="UPSSpaceXModel.Donor" Width="1.5" PointX="1.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSSpaceXModel.Desk" Width="1.5" PointX="4.875" PointY="0.875" />
+        <EntityTypeShape EntityType="UPSSpaceXModel.Giver" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="UPSSpaceXModel.Recipient" Width="1.5" PointX="2.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

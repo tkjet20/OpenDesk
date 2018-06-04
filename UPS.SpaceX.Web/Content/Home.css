@@ -1,0 +1,78 @@
+﻿#b1 {
+    background-color: black;
+}
+
+#b2 {
+    position: relative;
+    display: block;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+
+/*#btn1{
+    background-color: blue;
+}*/
+
+.center {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+#centerDate {
+    position: relative;
+    text-align: center;
+    left: 25%;
+    width: 50%;
+}
+
+.centerText {
+    text-align: center;
+}
+
+#centerBtn {
+    position: relative;
+    text-align: center;
+}
+
+#myImg {
+    position: relative;
+    text-align: center;
+    width: 75%;
+    left: 12.5%;
+}
+
+#myImg2 {
+    position: relative;
+    text-align: center;
+    width: 75%;
+    left: 12.5%;
+}
+
+.centerStuff {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+#emailField {
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+
+#myDIV {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+}
+
+#emailFiel {
+    position: relative;
+    left: 25%;
+    width: 50%;
+}

@@ -1,0 +1,66 @@
+﻿#don_btn {
+    position: relative;
+    display: block;
+    background-color: gold;
+    border-radius: 25px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    left: 0%;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.script-wrap {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+#textFields {
+    position: relative;
+    text-align: center;
+    left: 25%;
+    width: 50%;
+}
+
+#date {
+    position: relative;
+}
+
+#emailField {
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+
+#emailFiel {
+    position: relative;
+    left: 25%;
+    width: 50%;
+}
+
+/*@media screen and (max-width: 600px){
+    #emailFiel {
+        position: relative;
+        left: 10%;
+        width: 80%;
+    }
+    }*/
+
+#title {
+    position: relative;
+    text-align: center;
+}
+
+#OpenDeskList {
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+
+#emailF {
+    position: relative;
+    left: 38%;
+    width: 60%;
+}

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "LookUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/actions/lookup.js"></script>>
+    <script>
+        function myFunction() {
+            document.getElementById('myDIV').style.display = "block";
+        }
+    </script>
+}
+<h1 style="text-align:center">LookUp</h1>
+<br />
+<h3 class="centerText">Email</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div id="centerDate">
+                <div class="form-group">
+                    @*<label for="exampleInputEmail1">Email address</label>*@
+                    <input class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <br />
+                    <button type="button" onclick="showRecipientData(); showDonorData(); showKP(); myFunction(); " class="btn btn-warning">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myDIV" style="display:none;">
+    <div class="centerStuff">
+        <h2>Karma Points: <span id="KP"></span></h2>
+        <br />
+        <h2><u>Reserved</u></h2><br /><br />
+        <div id="DivReservedDesks">
+        </div>
+    </div>
+    <div class="centerStuff">
+        <h2><u>Donated</u></h2><br /><br />
+        <div id="DivDonatedDesks">
+        </div>
+    </div>
+</div>

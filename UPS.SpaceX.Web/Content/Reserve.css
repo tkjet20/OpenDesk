@@ -1,0 +1,16 @@
+﻿.script-wrap {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+#centerDate {
+    position: relative;
+    text-align: center;
+    left: 25%;
+    width: 50%;
+}
+
+#date {
+    position: relative;
+}

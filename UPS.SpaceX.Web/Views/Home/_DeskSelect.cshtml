@@ -1,0 +1,8 @@
+﻿@model IEnumerable<UPS.SpaceX.Core.DeskDto>
+
+<select id="DropDownAvailableDesks">
+    @foreach (UPS.SpaceX.Core.DeskDto desk in Model)
+    {
+        <option value="@desk.Id">@desk.Name</option>
+    }
+</select>

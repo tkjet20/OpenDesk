@@ -1,0 +1,38 @@
+﻿@model IEnumerable<UPS.SpaceX.Core.RecipientDto>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    @section scripts{
+        <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+        <script src="~/Scripts/actions/lookup.js"></script>>
+
+    }
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Desk</th>
+                <th scope="col">Date</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (UPS.SpaceX.Core.RecipientDto val in Model)
+            {
+                <tr>
+                    <td>@val.desk</td>
+                    <td>@val.date.ToString("MM/dd/yyyy")</td>
+                    <td>@val.email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</body>
+</html>
