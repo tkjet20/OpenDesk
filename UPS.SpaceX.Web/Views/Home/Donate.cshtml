@@ -16,7 +16,7 @@
             @using (Html.BeginForm())
             {
                 <br />
-                <h4 id="date">Date<br />@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</h4> <br />
+                <p>Date : @Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</p>
                 <h4>Enter your Desk</h4>
                 <input id="OpenDeskList" class="form-control" aria-describedby="emailHelp" placeholder="" type="text" required><br />
                 <h4>Enter your Email</h4>
