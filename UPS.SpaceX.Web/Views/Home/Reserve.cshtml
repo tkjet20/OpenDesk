@@ -5,9 +5,7 @@
     ViewBag.Title = "Reserve";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h1 class="centerText">Reserve a Desk</h1>
-<br />
-<br />
+<h2 class="centerText">Reserve</h2><br />
 
 @section scripts{
     <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
@@ -24,30 +22,27 @@
         });
     </script>
 }
-<div id="centerDate">
-    @using (Html.BeginForm())
-    {
-        <h4>Date</h4>
-        <p>@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</p>
-        <button type="button" onclick="showData()" class="btn btn-warning">SHOW DESKS</button>
-
-        <br />
-
-
-    }
-</div>
+    <div id="centerDate">
+        @using (Html.BeginForm())
+        {
+            <h4 style="position: relative">Date<br />@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</h4><br />
+            <button type="button" onclick="showData()" class="btn btn-warning">SHOW DESKS</button>
+            <br />
+        }
+    </div>
 <br />
 <link href="~/Content/jquery-ui-1.12.1.min.css" rel="stylesheet" />
 
-
-<br /><br />
-
 <div id="DivAvailableDesks"></div>
+@*<h2>Email</h2>
+    <input class="form-control" id="email_field" align-text="center" aria-describedby="emailHelp" placeholder="Enter email" type="email">*@
+@*<p>Enter your Email:</p>
+    <input class="form-control" aria-describedby="emailHelp" placeholder="" type="email"><br />*@
 <br />
 
 <div class="form-group">
-    <h4 id="centerBtn" for="exampleInputEmail1">Email address</h4>
-    <input class="FControl" id="emailField" aria-describedby="emailHelp" placeholder="Enter email" type="email">
+    <h4 id="centerBtn" for="exampleInputEmail1">ENTER YOUR EMAIL</h4>
+    <input class="form-control" id="emailFiel" aria-describedby="emailHelp" placeholder="" type="email">
     <small id="centerBtn" class="form-text text-muted">We'll never share your email with anyone else.</small>
 </div>
 
