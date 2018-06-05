@@ -10,10 +10,6 @@
     border-color: #f0ad4e;
 }
 
-/*#btn1{
-    background-color: blue;
-}*/
-
 .center {
     width: 100%;
     height: 100vh;
@@ -98,5 +94,11 @@
 #logo{
     position: relative;
     width: 100px;
+    height: auto;
+}
+
+#NavLogo {
+    position: relative;
+    width: 40px;
     height: auto;
 }
