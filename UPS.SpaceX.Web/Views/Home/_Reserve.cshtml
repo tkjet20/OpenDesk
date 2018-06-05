@@ -18,7 +18,7 @@
     <select id="DropDownAvailableDesks">
         @foreach (UPS.SpaceX.Core.GiverDto desk in Model)
         {
-            <option id="deskVal">@desk.Desk</option>
+            <option id="@desk.Desk">@desk.Desk</option>
         }
     </select>
 
