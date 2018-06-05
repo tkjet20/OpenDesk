@@ -1,9 +1,9 @@
 ﻿@model UPS.SpaceX.DAL.Giver
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "Donate";
-                Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Donate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="donateMain">
@@ -27,6 +27,8 @@
             @section scripts{
                 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
                 <script src="~/Scripts/actions/donte.js"></script>
+
+
                 <script>
                     $(function () {
                         $(".datepicker").datepicker({
@@ -46,7 +48,7 @@
         <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#exampleModal">
             Back
         </button>
-        <button class="btn btn-warning" onclick="myFunction();" type="button" data-toggle="modal" data-target="#exampleMod">Submit</button>
+        <button class="btn btn-warning" onclick="" type="button" data-toggle="modal" data-target="#exampleMod">Submit</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
