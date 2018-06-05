@@ -12,10 +12,10 @@
         @RenderBody()
         
         <div class="col-md-13 text-center">
-        <button onclick="location.href = 'Donate';" class="btn btn-warning" style="width: 300px">Donate Your Desk</button><br /><br />
-        <button onclick="location.href = 'Reserve';" class="btn btn-warning" style="width: 300px">Reserve A Desk</button><br /><br />
-        <button onclick="location.href = 'LookUp';" class="btn btn-warning" style="width: 300px">Current Reservations</button><br /><br />
-        <button onclick="location.href = 'FloorMap';" class="btn btn-warning" style="width: 300px">Map</button>
+            @Html.ActionLink("Donate Your Desk", "Donate", "Home", new { @id = "HomeNav", @class = "btn btn-warning" })<br />
+            @Html.ActionLink("Reserve a Desk", "Reserve", "Home", new { @id = "HomeNav", @class = "btn btn-warning" })<br />
+            @Html.ActionLink("Current Reservation", "LookUp", "Home", new { @id = "HomeNav", @class = "btn btn-warning" })<br />
+            @Html.ActionLink("Floor Maps", "FloorMap", "Home", new { @id = "HomeNav", @class = "btn btn-warning" })
         </div>
         <hr />
         <footer>

@@ -89,3 +89,12 @@
 .active{
     color: blue;
 }
+
+#HomeNav {
+    position: relative;
+    text-align: center;
+    display: block;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
