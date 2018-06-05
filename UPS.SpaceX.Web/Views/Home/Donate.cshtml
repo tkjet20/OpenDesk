@@ -19,14 +19,19 @@
                 <h4 style="position: relative">Date<br />@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</h4><br />
                 <h4>Enter your Desk</h4>
                 <input id="OpenDeskList" class="FControl" aria-describedby="emailHelp" placeholder="" type="text" required><br />
+                @*<div id="result-check"></div>*@
+
                 <h4>Enter your Email</h4>
                 <input id="emailField" class="FControl" aria-describedby="emailHelp" placeholder="" type="email" required><br />
+
             }
 
             <link href="~/Content/jquery-ui-1.12.1.min.css" rel="stylesheet" />
             @section scripts{
                 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
                 <script src="~/Scripts/actions/donte.js"></script>
+
+
                 <script>
                     $(function () {
                         $(".datepicker").datepicker({
@@ -38,6 +43,43 @@
                         });
                     });
                 </script>
+
+
+                @*<script>
+                    // email check function
+                    function email_check( email ) {
+                        @*var regex=/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+                        return (email != '' && email != 'undefined' && regex.test(email));
+
+                        return email != '';
+                    }
+
+                    // check when email input lost foucus
+                    $("#OpenDeskList").blur(function() {
+                      var email = $(this).val();
+
+                      // if value is empty then exit
+                      if (email == '') return;
+
+
+                      // valid check
+                      if(!email_check(email) ) {
+  	                    $("#result-check").text('Not valid email.');
+                        $(this).focus();
+                        return false;
+                      }
+                      else {
+  	                    $("#result-check").text('Email address test OK.');
+                      }
+                    });
+                </script>*@
+                @*<button onclick="myFunction()">Click me</button>
+            <p id="demo"></p>
+            <script>
+                function myFunction() {
+                    document.getElementById("demo").innerHTML = "Hello World";
+                }
+            </script>*@
             }
         </div>
 
@@ -46,7 +88,7 @@
         <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#exampleModal">
             Back
         </button>
-        <button class="btn btn-warning" onclick="myFunction();" type="button" data-toggle="modal" data-target="#exampleMod">Submit</button>
+        <button class="btn btn-warning" onclick="verifyEmail()" type="button" data-toggle="modal" data-target="#exampleMod">Submit</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
