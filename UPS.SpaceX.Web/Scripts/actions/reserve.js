@@ -40,7 +40,7 @@ function showData() {
 function DataTogether() {
     var date = document.getElementById("date").value;
     var email = document.getElementById("emailField").value;
-    var desk = document.getElementById("deskVal").value;
+    var desk = document.getElementById("DropDownAvailableDesks").value;
     var obj = { desk: desk, date: date, email: email };
     return obj;
 }
@@ -60,7 +60,7 @@ function Reserve() {
 }
 
 function getDeskDate() {
-    var desk = document.getElementById("deskVal").value;
+    var desk = document.getElementById("DropDownAvailableDesks").value;
     var date = document.getElementById("date").value;
     var obj = { desk: desk, date: date };
     return obj;
