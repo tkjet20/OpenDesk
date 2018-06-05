@@ -10,7 +10,8 @@
 <body id="b1">
     <div class="container body-content" style="align-items:center">
         @RenderBody()
-        
+        <p style="font-size:100px;text-align:center;color:white"><img id="logo" src="~/Content/Images/UPS-Logo.png"> Open Desk</p>
+
         <div class="col-md-13 text-center">
             @Html.ActionLink("Donate Your Desk", "Donate", "Home", new { @id = "HomeNav", @class = "btn btn-warning" })<br />
             @Html.ActionLink("Reserve a Desk", "Reserve", "Home", new { @id = "HomeNav", @class = "btn btn-warning" })<br />

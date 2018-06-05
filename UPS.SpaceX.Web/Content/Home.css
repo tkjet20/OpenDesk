@@ -86,10 +86,6 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-.active{
-    color: blue;
-}
-
 #HomeNav {
     position: relative;
     text-align: center;
@@ -97,4 +93,10 @@
     width: 300px;
     margin-right: auto;
     margin-left: auto;
+}
+
+#logo{
+    position: relative;
+    width: 100px;
+    height: auto;
 }

@@ -9542,3 +9542,15 @@ th {
 .card-title, .card-header {
   color: inherit;
 }
+
+.active {
+    color: gold;
+    position: relative;
+    border: 2px solid gold;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 25px;
+}
