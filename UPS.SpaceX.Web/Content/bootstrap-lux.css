@@ -2702,23 +2702,7 @@ fieldset:disabled a.btn {
     border-radius: 5px;
 }
 
-.btn-warning1 {
-    color: #fff;
-    background-color: green;
-    border: 1px solid #f0ad4e;
-    border-color: #f0ad4e;
-    border-radius: 5px;
-}
-
-.btn-warning2 {
-    color: #fff;
-    background-color: red;
-    border: 1px solid #f0ad4e;
-    border-color: #f0ad4e;
-    border-radius: 5px;
-}
-
-.btn-warning3 {
+.btn-warningHome {
     color: #fff;
     background-color: black;
     border: 1px solid #f0ad4e;
@@ -2733,7 +2717,7 @@ fieldset:disabled a.btn {
   opacity: 1;
 }
 
-.btn-warning3:hover {
+.btn-warningHome:hover {
     color: #fff;
     background-color: #ed9d2b;
     border-color: #ec971f;
