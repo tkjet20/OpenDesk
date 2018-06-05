@@ -148,6 +148,7 @@
     <Content Include="Content\Home.css" />
     <Content Include="Content\Images\2ndfloor.svg" />
     <Content Include="Content\Images\3rdfloor.svg" />
+    <Content Include="Content\Images\UPS-Logo.png" />
     <Content Include="Content\Reserve.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -251,6 +252,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Views\Home\UPS-Logo.png" />
+    <Content Include="Views\Shared\UPS-Logo.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,15 +1,15 @@
 ﻿<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="Index">Open Desk</a>
+    <a class="navbar-brand" href="Index" style="font-size: 22pt;">Open Desk</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-            <li>@Html.ActionLink("Donate Your Desk", "Donate", "Home", new { @class = "someClass" })</li>
-            <li>@Html.ActionLink("Reserve a Desk", "Reserve", "Home", new { @class = "someClass" })</li>
-            <li>@Html.ActionLink("Current Reservations", "LookUp", "Home", new { @class = "someClass" })</li>
-            <li>@Html.ActionLink("Floor Map", "FloorMap", "Home", new { @class = "someClass" })</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Donate" ? "active" : "")">@Html.ActionLink("Donate a Desk", "Donate", "Home", new { @class = "someClass" })</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Reserve" ? "active" : "")">@Html.ActionLink("Reserve a Desk", "Reserve", "Home", new { @class = "someClass" })</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "LookUp" ? "active" : "")">@Html.ActionLink("Current Reservations", "LookUp", "Home", new { @class = "someClass" })</li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "FloorMap" ? "active" : "")">@Html.ActionLink("Floor Map", "FloorMap", "Home", new { @class = "someClass" })</li>
         </ul>
     </div>
 </nav>
