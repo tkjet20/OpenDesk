@@ -11,25 +11,37 @@
             document.getElementById('myDIV').style.display = "block";
         }
     </script>
+
+    <script>
+        function HideFunction() {
+            var x = document.getElementById("LookUpDiv");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
 }
 <h1 style="text-align:center">LookUp</h1>
-<br />
-<h3 class="centerText">Enter Email</h3>
+<div id="LookUpDiv">
+<h3 class="centerText">Email</h3>
 <div class="container">
     <div class="row">
         <div class="col-md">
             <div id="centerDate">
                 <div class="form-group">
                     @*<label for="exampleInputEmail1">Email address</label>*@
-                    <input id="emailField" class="FControl" aria-describedby="emailHelp" placeholder="" type="email">
+                    <input id="emailField" class="FControl" aria-describedby="emailHelp" placeholder="Enter email" type="email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     <br />
-                    <button type="button" onclick="showRecipientData(); showDonorData(); showKP(); myFunction(); " class="btn btn-warning">Submit</button>
+                    <button type="button" onclick="showRecipientData(); showDonorData(); showKP(); myFunction(); HideFunction();" class="btn btn-warning">Submit</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+    </div>
 <div id="myDIV" style="display:none;">
     <div class="centerStuff">
         <h2>Karma Points: <span id="KP"></span></h2>
@@ -44,4 +56,6 @@
         <div id="DivDonatedDesks">
         </div>
     </div>
+    <br />
+    <button type="button" onclick="location.href = 'LookUp';" class="btn btn-warning">Check another reservation</button>
 </div>
