@@ -46,7 +46,7 @@
         <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#exampleModal">
             Back
         </button>
-        <button class="btn btn-warning" onclick="addDonor(); updateKP(); myFunction();" type="button" data-toggle="modal" data-target="#exampleMod">Submit</button>
+        <button class="btn btn-warning" onclick="myFunction();" type="button" data-toggle="modal" data-target="#exampleMod">Submit</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -79,7 +79,7 @@
                         </button>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" onclick="location.href = 'Index';" class="btn btn-warning" data-dismiss="modal" style="text-align: center;">Close</button>
+                        <button type="button" onclick="addDonor(); updateKP(); location.href = 'Index';" class="btn btn-warning" data-dismiss="modal" style="text-align: center;">Close</button>
                     </div>
                 </div>
             </div>
