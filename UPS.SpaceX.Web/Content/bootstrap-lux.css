@@ -4095,14 +4095,14 @@ input[type="button"].btn-block {
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
 .nav-link {
@@ -6380,7 +6380,8 @@ button.close {
 }
 
 .bg-primary {
-  background-color: #1a1a1a !important;
+    /*background-color: #1a1a1a !important;*/
+    background-image: url("https://media1.tenor.com/images/bd8bffd78009eab632d34294f1b760bb/tenor.gif?itemid=10152547");
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
