@@ -23,15 +23,13 @@
 
                 <h4>Enter your Email</h4>
                 <input id="emailField" class="FControl" aria-describedby="emailHelp" placeholder="" type="email" required><br />
-
             }
 
             <link href="~/Content/jquery-ui-1.12.1.min.css" rel="stylesheet" />
             @section scripts{
                 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
                 <script src="~/Scripts/actions/donte.js"></script>
-
-
+                <script src="~/Scripts/onsubmit_event.js"></script>
                 <script>
                     $(function () {
                         $(".datepicker").datepicker({
@@ -42,34 +40,50 @@
                             buttonText: "Select"
                         });
                     });
+
+                    $(document).ready(function () {
+                        $('#submit').click(function (e) {
+                            var isValid = true;
+
+                            $('#OpenDeskList,#emailField').each(function () {
+                                if ($.trim($(this).val()) == '') {
+                                    isValid = false;
+                                    alert("Please fill out all fields");
+
+                                    $(this).css({
+                                        "border": "1px solid red",
+                                        "background": "#FFCECE"
+                                    });
+
+                                    //if ($("#emailField").val().indexOf("@@ups.com") > -1) {
+                                    //    alert("hello0");
+                                    //}
+                                }
+                                else {
+                                    $(this).css({
+                                        "border": "green",
+                                        "background": ""
+                                    });
+                                }
+                            });
+
+                            if (isValid == false) {
+
+                                e.preventDefault();
+                            } else {
+                                $('#exampleMod').modal();
+                            }
+
+
+                        });
+                    });
+
+
+
                 </script>
 
 
-                @*<script>
-                    // email check function
-                    function email_check(email) {
-                        var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/g;
-                        
-                        return (email != '' && email != 'undefined' && regex.test(email));
-                    }
-
-                    // check when email input lost foucus
-                    $("#OpenDeskList").blur(function() {
-                      var email = $(this).val();
-
-                      if (email == '') return; // if value is empty then exit
-
-                      // valid check
-                      if(!email_check(email) ) {
-  	                    $("#result-check").text('Not valid email.');
-                        $(this).focus();
-                        return false;
-                      }
-                      else {
-  	                    $("#result-check").text('Email address test OK.');
-                      }
-                    });
-                </script>*@
+         
             }
         </div>
 
@@ -78,7 +92,7 @@
         <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#exampleModal">
             Back
         </button>
-        <button class="btn btn-warning" onclick="verifyEmail()" type="button" data-toggle="modal" data-target="#exampleMod">Submit</button>
+        <button class="btn btn-warning" onclick="verifyEmail()" type="button" data-toggle="modal" id="submit">Submit</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

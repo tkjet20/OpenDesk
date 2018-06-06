@@ -9565,10 +9565,8 @@ th {
     color: gold;
     position: relative;
     border: 2px solid #f0ad4e;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 5px;
+    background-color: #f0ad4e;
 }
