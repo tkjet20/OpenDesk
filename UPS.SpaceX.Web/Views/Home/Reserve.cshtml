@@ -20,16 +20,31 @@
                 buttonText: "Select"
             });
         });
+
+        // Make table row selectable
+        $(document).click(function () {
+            $("tbody tr").click(function () {
+                $('.selected').removeClass('selected');
+                $(this).addClass("selected");
+            });
+        });
     </script>
-}
-    <div id="centerDate">
-        @using (Html.BeginForm())
-        {
-            <h4 style="position: relative">Date<br />@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</h4><br />
-            <button type="button" onclick="showData()" class="btn btn-warning">SHOW DESKS</button>
-            <br />
+
+    @* Changes table row color to gold if it's selected*@
+    <style>
+        .selected {
+            background-color: #f0ad4e;
         }
-    </div>
+    </style>
+}
+<div id="centerDate">
+    @using (Html.BeginForm())
+    {
+        <h4 style="position: relative">Date<br />@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</h4><br />
+        <button type="button" onclick="showData()" class="btn btn-warning">SHOW DESKS</button>
+        <br />
+    }
+</div>
 <br />
 <link href="~/Content/jquery-ui-1.12.1.min.css" rel="stylesheet" />
 <div id="hideTable">
