@@ -7,14 +7,16 @@
 }
 <h2 class="centerText">Reserve</h2><br />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
 @section scripts{
     <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
     <script src="~/Scripts/actions/reserve.js"></script>>
     <script src="jQuery.ui.datepicker.js"></script>
     <script src="jquery.ui.datepicker.mobile.js"></script>
     <script>
-    $( document ).bind( "mobileinit", function(){
-    $.mobile.page.prototype.options.degradeInputs.date = true;
+        $(document).bind("mobileinit", function () {
+            $.mobile.page.prototype.options.degradeInputs.date = true;
         });
 
 
@@ -49,11 +51,25 @@
                 });
 
                 if (isvalid == false) {
-                    alert("please fill out all fields");
+                    $.alert({
+                        title: 'No Input Detected',
+                        content: 'Please fill out all fields.',
+                        animation: 'zoom',
+                        closeAnimation: 'scale',
+                        type: 'red',
+                        typeAnimated: true
+                    });
                     e.preventdefault();
 
                 } else if (rightEmail == false) {
-                    alert("please input a valid ups email");
+                    $.alert({
+                        title: 'Invalid Email Format',
+                        content: 'Please input a valid @@ups.com email.',
+                        animation: 'zoom',
+                        closeAnimation: 'scale',
+                        type: 'red',
+                        typeAnimated: true
+                    });
 
                 } else {
                     $('#exampleMod').modal();
@@ -77,10 +93,10 @@
 <div class=script-wrap>
     @using (Html.BeginForm())
     {
-    <h4 style="position: relative">
-        Date<br />
-        <input type="date" name="date" id="date" value="" />
-    </h4><br />
+        <h4 style="position: relative">
+            Date<br />
+            <input type="date" name="date" id="date" value="" />
+        </h4><br />
         <button type="button" onclick="showData()" class="btn btn-warning">SHOW DESKS</button>
         <br />
     }
