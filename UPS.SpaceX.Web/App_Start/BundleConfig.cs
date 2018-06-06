@@ -27,7 +27,8 @@ namespace UPS.SpaceX.Web
                      "~/Content/bootstrap-lux.css",
                      "~/Content/Site.css",
                      "~/Content/Home.css",
-                     "~/Content/Donate.css"));
+                     "~/Content/Donate.css",
+                     "http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"));
         }
     }
 }

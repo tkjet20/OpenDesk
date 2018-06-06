@@ -115,3 +115,23 @@
     text-align: center;
     overflow: auto;
 }
+
+
+
+left {
+    position: relative;
+    top: -40px;
+    float: left;
+}
+
+.right {
+    position: relative;
+    top: -40px;
+    float: right;
+}
+
+#main {
+    position: relative;
+    top: 170px;
+    float: left;
+}
