@@ -43,6 +43,9 @@ function DataTogether() {
     var date = document.getElementById("date").value;
     var email = document.getElementById("emailField").value;
     var desk = document.getElementById("DropDownAvailableDesks").value;
+    //var date = document.getElementById("date_select").value;
+    //var email = document.getElementById("email_select").value;
+    //var desk = document.getElementById("desk_select").value;
     var obj = { desk: desk, date: date, email: email };
     return obj;
 }
@@ -62,6 +65,8 @@ function Reserve() {
 }
 
 function getDeskDate() {
+    //var desk = document.getElementById("desk_select").value;
+    //var date = document.getElementById("date_select").value;
     var desk = document.getElementById("DropDownAvailableDesks").value;
     var date = document.getElementById("date").value;
     var obj = { desk: desk, date: date };
