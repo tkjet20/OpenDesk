@@ -27,8 +27,7 @@ namespace UPS.SpaceX.Web
                      "~/Content/bootstrap-lux.css",
                      "~/Content/Site.css",
                      "~/Content/Home.css",
-                     "~/Content/Donate.css"
-                   ));
+                     "~/Content/Donate.css"));
         }
     }
 }
