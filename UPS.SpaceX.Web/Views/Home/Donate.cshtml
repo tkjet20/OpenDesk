@@ -14,23 +14,26 @@
         <div id="textFields">
 
             @using (Html.BeginForm())
-            {
-                <h4 style="position: relative">
-                    Date<br />
-                    @*@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })*@
-                    <input type="date" name="date" id="date" value="" />
-                </h4><br />
-                <h4>Enter your Desk</h4>
-                <input id="OpenDeskList" class="FControl" aria-describedby="emailHelp" placeholder="" type="text" required><br />
-                @*<div id="result-check"></div>*@
+    {
+        <h4 style="position: relative">
+            Date<br />
+            @*@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })*@
+            <input type="date" name="date" id="date" value="" />
+        </h4><br />
+        <h4>Enter your Desk</h4>
+        <input id="OpenDeskList" class="FControl" aria-describedby="emailHelp" placeholder="" type="text" required><br />
+        @*<div id="result-check"></div>*@
 
-                <h4>Enter your Email</h4>
-                <input id="emailField" class="FControl" aria-describedby="emailHelp" placeholder="" type="email" required><br />
-            }
+        <h4>Enter your Email</h4>
+        <input id="emailField" class="FControl" aria-describedby="emailHelp" placeholder="" type="email" required><br />
+}
 
             <link href="~/Content/jquery-ui-1.12.1.min.css" rel="stylesheet" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+            
             @section scripts{
                 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
                 <script src="~/Scripts/actions/donte.js"></script>
                 <script src="jQuery.ui.datepicker.js"></script>
                 <script src="jquery.ui.datepicker.mobile.js"></script>
@@ -70,15 +73,32 @@
                             });
 
                             if (isvalid == false) {
-                                alert("please fill out all fields");
+                                $.alert({
+                                    title: 'No Input Detected',
+                                    content: 'Please fill out all fields.',
+                                    animation: 'zoom',
+                                    closeAnimation: 'scale',
+                                    type: 'red',
+                                    typeAnimated: true
+                                });
                                 e.preventdefault();
 
                             } else if (rightEmail == false) {
-                                alert("please input a valid ups email");
+
+                                $.alert({
+                                    title: 'Invalid Email Format',
+                                    content: 'Please input a valid @@ups.com email.',
+                                    animation: 'zoom',
+                                    closeAnimation: 'scale',
+                                    type: 'red',
+                                    typeAnimated: true
+                                });
+
 
                             } else {
                                 $('#exampleMod').modal();
-
+                                addDonor();
+                                updateKP();
                             }
 
 
