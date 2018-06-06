@@ -41,42 +41,50 @@
                         });
                     });
 
-                    //$(document).ready(function () {
-                    //    $('#submit').click(function (e) {
-                    //        var isValid = true;
+                    $(document).ready(function () {
+                        $('#submit').click(function (e) {
+                            var isvalid = true;
+                            var rightEmail = true;
 
-                    //        $('#OpenDeskList,#emailField').each(function () {
-                    //            if ($.trim($(this).val()) == '') {
-                    //                isValid = false;
-                    //                alert("Please fill out all fields");
-
-                    //                $(this).css({
-                    //                    "border": "1px solid red",
-                    //                    "background": "#FFCECE"
-                    //                });
-
-                    //                //if ($("#emailField").val().indexOf("@@ups.com") > -1) {
-                    //                //    alert("hello0");
-                    //                //}
-                    //            }
-                    //            else {
-                    //                $(this).css({
-                    //                    "border": "green",
-                    //                    "background": ""
-                    //                });
-                    //            }
-                    //        });
-
-                    //        if (isValid == false) {
-
-                    //            e.preventDefault();
-                    //        } else {
-                    //            $('#exampleMod').modal();
-                    //        }
+                            $('#OpenDeskList,#emailField,#date').each(function () {
+                                if ($.trim($(this).val()) == '') {
+                                    isvalid = false;
 
 
-                    //    });
-                    //});
+                                    $(this).css({
+                                        "border": "1px solid red",
+                                        "background": "#ffcece"
+                                    });
+                                }
+                                else if (!($('#emailField').val().indexOf('@@ups.com') > -1)) {
+                                    rightEmail = false;
+
+                                    $(this).css({
+                                        "border": "1px solid red",
+                                        "background": "#ffcece"
+                                    });
+                                } else {
+                                    $(this).css({
+                                        "border": "1px solid green"
+                                         
+                                    });
+                                }
+                            });
+
+                            if (isvalid == false) {
+                                alert("please fill out all fields");
+                                e.preventdefault();
+
+                            } else if (rightEmail == false) {
+                                alert("please input a valid ups email");
+
+                            } else {
+                                $('#exampleMod').modal();
+                            }
+
+
+                        });
+                    });
 
 
 
@@ -89,7 +97,7 @@
         <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#exampleModal">
             Back
         </button>
-        <button class="btn btn-warning" onclick="ValidationEvent()" type="button" data-toggle="modal" id="submit">Submit</button>
+        <button class="btn btn-warning"  type="button" data-toggle="modal" id="submit">Submit</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
