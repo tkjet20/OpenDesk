@@ -13,7 +13,9 @@ function showData() {
         error: function (xhr, status, error) {
 
         },
+        // Empties the table everytime, then appends the reserve table
         success: function (response) {
+            $("#DivAvailableDesks").empty();
             $("#DivAvailableDesks").append($(response)).fadeIn("slow");
         }
     });
