@@ -14,7 +14,6 @@
     }
 
     <h2 class="centerText">Desk</h2>
-
     <select id="DropDownAvailableDesks">
         @foreach (UPS.SpaceX.Core.GiverDto desk in Model)
         {
@@ -34,9 +33,9 @@
             @foreach (UPS.SpaceX.Core.GiverDto val in Model)
             {
                 <tr>
-                    <td>@val.Desk</td>
-                    <td>@val.Date.ToString("MM/dd/yyyy")</td>
-                    <td>@val.Email</td>
+                    <td id="desk_select">@val.Desk</td>
+                    <td id="date_select">@val.Date.ToString("MM/dd/yyyy")</td>
+                    <td id="email_select">@val.Email</td>
                 </tr>
             }
         </tbody>
