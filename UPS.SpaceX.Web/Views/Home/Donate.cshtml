@@ -15,8 +15,11 @@
 
             @using (Html.BeginForm())
             {
-                <br />
-                <h4 style="position: relative">Date<br />@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</h4><br />
+                <h4 style="position: relative">
+                    Date<br />
+                    @*@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })*@
+                    <input type="date" name="date" id="date" value="" />
+                </h4><br />
                 <h4>Enter your Desk</h4>
                 <input id="OpenDeskList" class="FControl" aria-describedby="emailHelp" placeholder="" type="text" required><br />
                 @*<div id="result-check"></div>*@
@@ -29,58 +32,50 @@
             @section scripts{
                 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
                 <script src="~/Scripts/actions/donte.js"></script>
-                <script src="~/Scripts/OnSubmit.js"></script>
+                <script src="jQuery.ui.datepicker.js"></script>
+                <script src="jquery.ui.datepicker.mobile.js"></script>
                 <script>
-                    $(function () {
-                        $(".datepicker").datepicker({
-                            dateFormat: "mm/dd/yy",
-                            changeMonth: true,
-                            changeYear: true,
-                            showOn: "both",
-                            buttonText: "Select"
-                        });
+                    $(document).bind("mobileinit", function () {
+                        $.mobile.page.prototype.options.degradeInputs.date = true;
                     });
-
-                    //$(document).ready(function () {
-                    //    $('#submit').click(function (e) {
-                    //        var isValid = true;
-
-                    //        $('#OpenDeskList,#emailField').each(function () {
-                    //            if ($.trim($(this).val()) == '') {
-                    //                isValid = false;
-                    //                alert("Please fill out all fields");
-
-                    //                $(this).css({
-                    //                    "border": "1px solid red",
-                    //                    "background": "#FFCECE"
-                    //                });
-
-                    //                //if ($("#emailField").val().indexOf("@@ups.com") > -1) {
-                    //                //    alert("hello0");
-                    //                //}
-                    //            }
-                    //            else {
-                    //                $(this).css({
-                    //                    "border": "green",
-                    //                    "background": ""
-                    //                });
-                    //            }
-                    //        });
-
-                    //        if (isValid == false) {
-
-                    //            e.preventDefault();
-                    //        } else {
-                    //            $('#exampleMod').modal();
-                    //        }
-
-
-                    //    });
-                    //});
-
-
-
                 </script>
+
+                //$(document).ready(function () {
+                //    $('#submit').click(function (e) {
+                //        var isValid = true;
+
+                //        $('#OpenDeskList,#emailField').each(function () {
+                //            if ($.trim($(this).val()) == '') {
+                //                isValid = false;
+                //                alert("Please fill out all fields");
+
+                //                $(this).css({
+                //                    "border": "1px solid red",
+                //                    "background": "#FFCECE"
+                //                });
+
+                //                //if ($("#emailField").val().indexOf("@@ups.com") > -1) {
+                //                //    alert("hello0");
+                //                //}
+                //            }
+                //            else {
+                //                $(this).css({
+                //                    "border": "green",
+                //                    "background": ""
+                //                });
+                //            }
+                //        });
+
+                //        if (isValid == false) {
+
+                //            e.preventDefault();
+                //        } else {
+                //            $('#exampleMod').modal();
+                //        }
+
+
+                //    });
+                //});
             }
         </div>
 
