@@ -15,7 +15,55 @@
     <script>
     $( document ).bind( "mobileinit", function(){
     $.mobile.page.prototype.options.degradeInputs.date = true;
-    });
+        });
+
+
+        $(document).ready(function () {
+            $('#submit').click(function (e) {
+                var isvalid = true;
+                var rightEmail = true;
+
+                $('#emailField,#date').each(function () {
+                    if ($.trim($(this).val()) == '') {
+                        isvalid = false;
+
+
+                        $(this).css({
+                            "border": "1px solid red",
+                            "background": "#ffcece"
+                        });
+                    }
+                    else if (!($('#emailField').val().indexOf('@@ups.com') > -1)) {
+                        rightEmail = false;
+
+                        $(this).css({
+                            "border": "1px solid red",
+                            "background": "#ffcece"
+                        });
+                    } else {
+                        $(this).css({
+                            "border": "1px solid green"
+
+                        });
+                    }
+                });
+
+                if (isvalid == false) {
+                    alert("please fill out all fields");
+                    e.preventdefault();
+
+                } else if (rightEmail == false) {
+                    alert("please input a valid ups email");
+
+                } else {
+                    $('#exampleMod').modal();
+                    Reserve();
+                    updateFlag();
+                }
+
+
+            });
+        });
     </script>
 
     @* Changes table row color to gold if it's selected*@
@@ -53,7 +101,7 @@
 
 <div id="centerBtn">
     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Back</button>
-    <button class="btn btn-warning" onclick="Reserve(); updateFlag();" type="button" data-toggle="modal" data-target="#exampleMod">
+    <button class="btn btn-warning" type="button" data-toggle="modal" id="submit">
         Proceed
     </button>
 
