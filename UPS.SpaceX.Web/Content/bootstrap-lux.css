@@ -6380,8 +6380,8 @@ button.close {
 }
 
 .bg-primary {
-    /*background-color: #1a1a1a !important;*/
-    background-image: url("https://media1.tenor.com/images/bd8bffd78009eab632d34294f1b760bb/tenor.gif?itemid=10152547");
+    background-color: #1a1a1a !important;
+    /*background-image: url("https://media1.tenor.com/images/bd8bffd78009eab632d34294f1b760bb/tenor.gif?itemid=10152547");*/
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
