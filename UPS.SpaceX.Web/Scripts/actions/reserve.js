@@ -14,7 +14,7 @@ function showData() {
 
         },
         success: function (response) {
-            $("#DivAvailableDesks").append($(response));
+            $("#DivAvailableDesks").append($(response)).fadeIn("slow");
         }
     });
 }
@@ -54,7 +54,7 @@ function Reserve() {
 
         },
         success: function (response) {
-            $("#DivAvailableDesks").append($(response));
+
         }
     });
 }
