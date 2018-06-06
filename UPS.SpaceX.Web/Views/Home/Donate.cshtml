@@ -29,7 +29,7 @@
             @section scripts{
                 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
                 <script src="~/Scripts/actions/donte.js"></script>
-                <script src="~/Scripts/onsubmit_event.js"></script>
+                <script src="~/Scripts/OnSubmit.js"></script>
                 <script>
                     $(function () {
                         $(".datepicker").datepicker({
@@ -41,49 +41,46 @@
                         });
                     });
 
-                    $(document).ready(function () {
-                        $('#submit').click(function (e) {
-                            var isValid = true;
+                    //$(document).ready(function () {
+                    //    $('#submit').click(function (e) {
+                    //        var isValid = true;
 
-                            $('#OpenDeskList,#emailField').each(function () {
-                                if ($.trim($(this).val()) == '') {
-                                    isValid = false;
-                                    alert("Please fill out all fields");
+                    //        $('#OpenDeskList,#emailField').each(function () {
+                    //            if ($.trim($(this).val()) == '') {
+                    //                isValid = false;
+                    //                alert("Please fill out all fields");
 
-                                    $(this).css({
-                                        "border": "1px solid red",
-                                        "background": "#FFCECE"
-                                    });
+                    //                $(this).css({
+                    //                    "border": "1px solid red",
+                    //                    "background": "#FFCECE"
+                    //                });
 
-                                    //if ($("#emailField").val().indexOf("@@ups.com") > -1) {
-                                    //    alert("hello0");
-                                    //}
-                                }
-                                else {
-                                    $(this).css({
-                                        "border": "green",
-                                        "background": ""
-                                    });
-                                }
-                            });
+                    //                //if ($("#emailField").val().indexOf("@@ups.com") > -1) {
+                    //                //    alert("hello0");
+                    //                //}
+                    //            }
+                    //            else {
+                    //                $(this).css({
+                    //                    "border": "green",
+                    //                    "background": ""
+                    //                });
+                    //            }
+                    //        });
 
-                            if (isValid == false) {
+                    //        if (isValid == false) {
 
-                                e.preventDefault();
-                            } else {
-                                $('#exampleMod').modal();
-                            }
+                    //            e.preventDefault();
+                    //        } else {
+                    //            $('#exampleMod').modal();
+                    //        }
 
 
-                        });
-                    });
+                    //    });
+                    //});
 
 
 
                 </script>
-
-
-         
             }
         </div>
 
@@ -92,7 +89,7 @@
         <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#exampleModal">
             Back
         </button>
-        <button class="btn btn-warning" onclick="verifyEmail()" type="button" data-toggle="modal" id="submit">Submit</button>
+        <button class="btn btn-warning" onclick="ValidationEvent()" type="button" data-toggle="modal" id="submit">Submit</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
