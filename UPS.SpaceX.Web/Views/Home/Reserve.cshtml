@@ -17,7 +17,7 @@
                 changeMonth: true,
                 changeYear: true,
                 showOn: "both",
-                buttonText: "Select"
+                buttonText: "Date"
             });
         });
 
@@ -37,7 +37,7 @@
         }
     </style>
 }
-<div id="centerDate">
+<div class=script-wrap>
     @using (Html.BeginForm())
     {
         <h4 style="position: relative">Date<br />@Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "datepicker" } })</h4><br />
